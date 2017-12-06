@@ -1,7 +1,8 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2>外部首页</h2>
+@Html.ActionLink("前往内部首页","Index",new { Controller="Home",area="Home"},new { @class="form-control"})
+<br/>
+<a href="@Url.Action("Index","Home",new { area="Home"})">前往内部首页</a>
