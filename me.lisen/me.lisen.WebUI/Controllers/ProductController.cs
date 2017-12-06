@@ -30,6 +30,7 @@ namespace me.lisen.WebUI.Controllers
         // GET: Product/Create
         public ActionResult Create()
         {
+
             return View();
         }
 
