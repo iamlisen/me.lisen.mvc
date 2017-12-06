@@ -14,16 +14,15 @@ namespace me.lisen.WebUI.Controllers
     {
         private readonly ICustomerDb customerDb;
         
-        public CustomerController() {
-            IKernel kernel = new StandardKernel();
-            customerDb = kernel.Get<ICustomerDb>();           
+        public CustomerController(ICustomerDb customerDb) {
+            this.customerDb = customerDb;          
         }
 
         // GET: Customer
         public ActionResult Index()
         {
             ViewBag.Customers = customerDb.GetCustomers();
-            return View();
+            return View(customerDb.GetCustomers());
         }
     }
 }

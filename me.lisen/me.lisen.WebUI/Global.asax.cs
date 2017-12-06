@@ -1,5 +1,6 @@
 ﻿using me.lisen.Db;
 using me.lisen.Db.CustomerDb;
+using me.lisen.Util.Loc;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -20,16 +21,7 @@ namespace me.lisen.WebUI
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            KernerBind();
-        }
-
-        /// <summary>
-        /// 绑定
-        /// </summary>
-        private void KernerBind()
-        {
-            IKernel kernel = new StandardKernel();
-            kernel.Bind<ICustomerDb>().To<CustomerDb>();          
-        }
+            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
+        }       
     }
 }

@@ -1,0 +1,3 @@
+﻿<module name="Db">
+  <bind service="me.lisen.Db.CustomerDb.ICustomerDb,me.lisen.Db" to="me.lisen.Db.CustomerDb.CustomerDb,me.lisen.Db"></bind>
+</module>

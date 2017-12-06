@@ -1,7 +1,15 @@
-﻿
+﻿@using me.lisen.Models;
+@model List<Customer>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "首页";
 }
-
-<h2>Index</h2>
-
+<h2>首页</h2>
+<div class="container">
+   @foreach (var customer in Model)
+   {
+    <div class="row" style="margin-bottom:5px;">
+        <div class="col-md-6"><span class="form-control">@customer.CompanyName</span></div>
+        <div class="col-md-6"><span class="form-control">@customer.Region</span></div>
+    </div>
+   }
+</div>

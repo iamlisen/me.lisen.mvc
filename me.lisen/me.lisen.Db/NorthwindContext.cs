@@ -12,7 +12,6 @@ namespace me.lisen.Db
 {
     public class NorthwindContext : DbContext
     {
-        [Inject]
         public NorthwindContext() : base("SqlServer")
         {
 
