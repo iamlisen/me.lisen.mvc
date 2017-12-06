@@ -13,7 +13,6 @@ namespace me.lisen.Db.CustomerDb
     {
         private readonly NorthwindContext context;
 
-        [Inject]
         public CustomerDb()
         {
             context = new NorthwindContext();

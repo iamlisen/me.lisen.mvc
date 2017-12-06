@@ -76,6 +76,8 @@
     <Compile Include="CustomerDb\CustomerDb.cs" />
     <Compile Include="CustomerDb\ICustomerDb.cs" />
     <Compile Include="NorthwindContext.cs" />
+    <Compile Include="ProductDb\IProductDb.cs" />
+    <Compile Include="ProductDb\ProductDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
