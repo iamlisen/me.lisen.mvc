@@ -13,14 +13,16 @@ namespace me.lisen.WebUI.Controllers
     public class CustomerController : Controller
     {
         private readonly ICustomerDb customerDb;
-        
-        public CustomerController(ICustomerDb customerDb) {
-            this.customerDb = customerDb;          
+
+        public CustomerController(ICustomerDb customerDb)
+        {
+            this.customerDb = customerDb;
         }
 
         // GET: Customer
         public ActionResult Index()
         {
+            var routeDataValue = RouteData.Values;
             ViewBag.Customers = customerDb.GetCustomers();
             return View(customerDb.GetCustomers());
         }

@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "首页";
 }
-<h2>首页</h2>
+<h2>@ViewContext.RouteData.Values["Controller"]/@ViewContext.RouteData.Values["Action"]</h2>
 <div class="container">
    @foreach (var customer in Model)
    {
